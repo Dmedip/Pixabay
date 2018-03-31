@@ -7,6 +7,10 @@ export class DataService {
   public storage:any;
   constructor(private http: Http) {  }
   
+  /**
+   * Service to fetch images from pixabay
+   * @param  {} pagenumber - input should be pagenumber
+   */
   getIntialImages(pagenumber){
     const requestOptions = {
       headers: new Headers({

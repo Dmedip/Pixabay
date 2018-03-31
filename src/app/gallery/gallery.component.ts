@@ -18,7 +18,10 @@ export class GalleryComponent {
     this.currentPage = 1;
     this.getImageData(this.currentPage);
   }
-
+  /**
+   * Function to get image details based on pagination
+   * @param  {} pageNumber
+   */
   getImageData(pageNumber) {
     this.data.getIntialImages(pageNumber).subscribe(data => {
       console.log("data",data);
@@ -28,13 +31,19 @@ export class GalleryComponent {
       console.log("error: ", error);
     });
   }
-
+  /**
+   * Function triggers when user select a pic from the gallery view
+   * @param  {} image
+   */
   setSelectedImage(image){
     this.data.storage = image;
     this.router.navigate(["detail"]);
   }
-
-  getPage(event){
+  /**
+   * Function to get pagenumber when user clicks on the pagination control
+   * @param  {} event
+   */
+  getPageNumber(event){
     this.currentPage = event;
     this.getImageData(event);
   }
