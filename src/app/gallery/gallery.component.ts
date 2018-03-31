@@ -28,7 +28,6 @@ export class GalleryComponent {
       this.total = data.totalHits;
       this.imageList = data.hits;
     }, error => {
-      console.log("error: ", error);
     });
   }
   /**

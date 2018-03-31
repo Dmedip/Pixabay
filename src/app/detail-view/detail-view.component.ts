@@ -14,7 +14,6 @@ export class DetailViewComponent implements OnInit {
   public ImageSize: any;
   public constructor(private route: ActivatedRoute,private data:DataService) {
     this.ImageDetail = this.data.storage;
-    console.log("Selected Image",this.ImageDetail);
   }
 
   ngOnInit() {
