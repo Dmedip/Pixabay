@@ -1,0 +1,22 @@
+<div class="image-detail-container">
+  <div class="detail-header" align="center">
+    Awesome Pic Facts
+  </div>
+  <div class="image-detail-content" align="center">
+    <img class="img-thumbnail" src="{{ImageDetail.webformatURL}}" height="{{ImageDetail.webformatHeight}}" width="{{ImageDetail.webformatWidth}}">
+
+    <div class="image-detail" align="left" [style.width.px]=ImageDetail.webformatWidth>
+      <div class="pull-left">
+        <a data-toggle="tooltip" title="Photographer Name" class="glyphicon glyphicon-user">&nbsp;</a>{{ImageDetail.user}}<br>
+        <a data-toggle="tooltip" title="Tags" class="glyphicon glyphicon-tags">&nbsp;</a>{{ImageDetail.tags}}<br>
+      </div>
+      <div class="pull-right">
+        <a data-toggle="tooltip" title="Views" class="glyphicon glyphicon-eye-open">&nbsp;</a>{{ImageDetail.views}}<br>
+        <a data-toggle="tooltip" title="Downloads" class="glyphicon glyphicon-download">&nbsp;</a>{{ImageDetail.downloads}}<br>
+        <a data-toggle="tooltip" title="Image Size" class="glyphicon glyphicon-file">&nbsp;</a>{{ImageDetail.imageSize | fileSize}}<br>
+      </div>
+    </div>
+
+    <a class="nav-back" [routerLink]="['/master']">Back to Gallery</a>
+  </div>
+</div>

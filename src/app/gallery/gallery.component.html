@@ -1,0 +1,13 @@
+<div class="gallery-container">
+  <div class="detail-header" align="center">
+    Pixabay Image Gallery
+  </div>
+  <ul id="thumbnailsList">
+    <li *ngFor="let image of imageList | paginate: { itemsPerPage: 20, currentPage: currentPage ,totalItems: total }">
+      <img src="{{image.previewURL}}" class="tn" width="191" height="146" (click)=setSelectedImage(image)>
+    </li>
+  </ul>
+  <div align="center">
+    <pagination-controls class="pixabay-pagination" (pageChange)="getPage($event)"></pagination-controls>
+  </div>
+</div>
